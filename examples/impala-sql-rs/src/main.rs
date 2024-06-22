@@ -1,7 +1,7 @@
 use tree_sitter::Parser;
 
 fn main() {
-    let code = "hello";
+    let code = "SELECT * FROM table_name";
 
     let mut parser = Parser::new();
     parser

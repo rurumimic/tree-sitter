@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Impala SQL grammar for tree-sitter",
   "private": false,
-  "main": "bindings/node",
+  "main": "bindings/node/index.js",
   "types": "bindings/node",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/rurumimic/tree-sitter#readme",
   "dependencies": {
+    "nan": "^2.20.0",
     "node-gyp-build": "^4.8.0"
   },
   "peerDependencies": {

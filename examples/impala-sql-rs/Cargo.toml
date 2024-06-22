@@ -1,5 +1,5 @@
 [package]
-name = "impala"
+name = "impala-sql-rs"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,5 +7,4 @@ edition = "2021"
 
 [dependencies]
 tree-sitter = "0.22.6"
-tree-sitter-impala = { path = "../../tree-sitter-impala" }
-
+tree-sitter-impala = { version = "0.0.1", path = "../../tree-sitter-impala" }
