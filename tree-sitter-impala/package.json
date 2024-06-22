@@ -4,8 +4,11 @@
   "description": "Impala SQL grammar for tree-sitter",
   "private": false,
   "main": "bindings/node",
+  "types": "bindings/node",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "node-gyp-build",
+    "prebuildify": "prebuildify --napi --strip"
   },
   "repository": {
     "type": "git",
@@ -14,10 +17,40 @@
   "keywords": [
     "tree-sitter"
   ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**"
+  ],
   "author": "rurumimic",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rurumimic/tree-sitter/issues"
   },
-  "homepage": "https://github.com/rurumimic/tree-sitter#readme"
+  "homepage": "https://github.com/rurumimic/tree-sitter#readme",
+  "dependencies": {
+    "node-gyp-build": "^4.8.0"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.21.0"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "prebuildify": "^6.0.0"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.impala",
+      "injection-regex": "^impala$",
+      "file-types": ["sql"],
+      "highlights": "queries/highlights.scm"
+    }
+  ]
 }

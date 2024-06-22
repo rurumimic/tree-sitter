@@ -1,0 +1,27 @@
+===
+select * from table_name;
+===
+
+select * from table_name;
+
+---
+
+(source_file
+      (select_statement
+        (select)
+        (from)
+        (table_name)))
+
+===
+SELECT * FROM table_name;
+===
+
+SELECT * FROM table_name;
+
+---
+
+(source_file
+      (select_statement
+        (select)
+        (from)
+        (table_name)))
